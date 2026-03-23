@@ -1,2 +1,910 @@
 # Java-
 Java questions and pseudo code 
+Q   ADD ALL DIGIT 
+    
+/* DECLARE n :INTEGER 
+   DECLARE a :INTEGER
+   DECLARE b :INTEGER
+   SET b:=0 , SUM:=0;
+   READ n 
+   WHILE n>0
+   a:=n MOD 10
+    N:= N/10 
+    SUM :=SUM +a
+  END WHILE
+  PRINT SUM */
+
+import java.util.Scanner;
+
+public class addAllDigit {
+  public static void main(String[] args) {
+     Scanner sc = new Scanner(System.in);
+    int n =sc.nextInt();
+      
+      int sum =0;
+      while(n > 0){
+            int a = n % 10;
+            sum = sum + a;
+            n = n / 10;
+        }
+     System.out.println(sum);
+  }
+}
+
+
+
+Q Add All Elment OF Array 
+
+/* DECLARE n :ARRAY[0:4] OF INTEGER 
+   DECLARE sum :INTEGER
+   SET SUM :=0
+   FOR i=0 TO 4
+   sum:= sum+a[i]
+   END FOR 
+   PRINT sum 
+   FOR I:=0 TO 4 
+   READ a[i] 
+   END FOR */
+
+import java.util.Scanner;
+
+public class addAllElmentOFArray {
+  public static void main(String[] args) {
+    
+        Scanner sc = new Scanner(System.in);
+
+        int[] a = new int[5];
+        int sum = 0;
+
+        for(int i = 0; i <= 4; i++){
+            a[i] = sc.nextInt();
+        }
+
+        for(int i = 0; i <= 4; i++){
+            sum = sum + a[i];
+        }
+
+        System.out.println(sum);
+    }
+}
+ 
+
+
+Q Even Odd
+ 
+
+/* DECARE a : INTEGER 
+   READ a 
+   IF a MOD 2==0  THEN 
+   PRINT "a is even"
+   ELSE 
+        PRINT "a is odd "
+      END IF */
+public class evenOdd {
+  public static void main(String[] args) {
+    int a =25;
+    if (a%2==0){
+      System.out.println("a is even");
+    }
+    else{
+      System.out.println("a is odd ");
+    }
+  }
+}
+
+
+
+
+Q Gretest Of TwoNumber
+
+
+/*DECLARE  a : INTEGER 
+  DECLARE  b : INTEGER 
+  READ a 
+  READ b 
+  IF a > b THEN 
+   PRINT "a is greter then b "
+   ELSE 
+         PRINT   "b is greter then a"
+      END IF */
+public class gretestOfTwoNumber{
+  public static void main(String[] args) {
+    int a=10;
+    int b=15;
+    if(a>b){
+      System.out.println("a is greater");
+    }
+    else{
+      System.out.println("b is gretar then a ");
+    }
+  }
+}
+
+
+
+Q How Many Digit Present
+
+
+/* DECLARE n :INTEGER 
+   DECLARE cnt :INTEGER
+   DECLARE d :INTEGER 
+   SET cnt:=0
+   READ n 
+   READ d 
+   WHILE n >0
+   a:=n MOD 10
+   n:=n/10
+   IF a ==d THEN 
+      INCREMENT cnt 
+      END IF 
+    END WHILE 
+    PRINT cnt 
+    */
+
+import java.util.Scanner;
+
+public class howManyDigitPresent {
+  public static void main(String[] args) {
+     Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();   
+        int d = sc.nextInt();  
+
+        int cnt = 0;
+
+        while(n > 0){
+
+            int a = n % 10;     
+            n = n / 10;        
+
+            if(a == d){
+                cnt++;        
+            }
+        }
+
+        System.out.println(cnt);
+  }
+}
+
+
+
+Q   Max Array 
+
+   /* DECLARE a : ARRAY[0:5] OF INTEGER 
+DECLARE max: INTEGER
+FOR I:=0 TO 4
+  READ a[i]
+  END FPOR 
+  SET max:= a[0]
+  FOR I:=0 TO 4
+  IF a[i]>max THEN 
+  max:=a[i]
+  END IF 
+  END IF 
+  PRINT MAX 
+ */
+
+import java.util.Scanner;
+
+public class max_Array {
+  public static void main(String[] args) {
+      
+        Scanner sc = new Scanner(System.in);
+
+        int[] a = new int[5];
+        int max;
+
+        for(int i = 0; i <= 4; i++){
+            a[i] = sc.nextInt();
+        }
+
+        max = a[0];
+
+        for(int i = 0; i <= 4; i++){
+            if(a[i] > max){
+                max = a[i];
+            }
+        }
+
+        System.out.println(max);
+  }
+}
+
+
+
+
+Q QUESTION 
+
+
+/* DECLARE p :INTEGER 
+   DECLARE q :INTEGER
+   DECLARE r :INTEGER
+   SET q =13
+   FOR (EACH p FROM 1 TO 4)
+   r = q MOD p 
+   p =p+5
+   q +p+r
+   END FOR 
+   r =9/5
+   PRINT q,r */
+public class Question {
+  public static void main(String[] args) {
+      int p, q, r;
+
+        q = 13;
+
+        for (p = 1; p <= 4; p++) {
+
+            r = q % p;      
+
+            p = p + 5;      
+
+            q = p + r;     
+        }
+
+        r = q / 5;
+
+        System.out.println(q + " " + r);
+  }
+}
+
+
+Q Reverse Number
+  
+
+/*DECLARE n : INTEGER 
+  DECLARE a : INTEGER
+  DECLARE b : INTEGER
+    
+    SET b =0
+    READ n 
+    WHILE n>0
+        a:= n MOD 10
+        n:= n/10 
+        b:= b*10+a
+      ENDWHILE
+      PRINT b  */
+
+import java.util.Scanner;
+
+public class reverseNumber {
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int n =sc.nextInt();
+     int a =sc.nextInt();
+      int b =0;
+      while(n>0){
+        a=n%10;
+        n=n/10;
+        b=b*10+a;
+      }
+
+          System.out.println(b);
+
+  }
+}
+
+
+
+
+Q User Password 
+
+
+/*DECLARE uid : STRING 
+  DECLARE pass : STRING 
+  READ uid 
+  READ pass
+  IF uid =="admin" THEN 
+   IF pass =="admin"  THEN 
+      PRINT "Welcome "
+    ELSE 
+       Print "Incorrect Password"
+  ELSE 
+    PRINT "Incorrect user ID"*/
+
+    import java.util.*;
+public class userPassword {
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Enter a user ID : ");
+      String uid=sc.nextLine();
+      System.out.println("Enter a password : ");
+      String pass= sc.nextLine();
+      if (uid.equals("userId")){
+        if(pass.equals("Password")){
+          System.out.println("Welcome");
+        }
+        else{
+          System.out.println("Incorrect Password");
+        }
+      }
+      System.out.println("Incorrect User ID");
+  }
+}
+
+
+
+
+                              ----Area of corcle----
+
+/* DECLARE radius : REAL
+   DECLARE area : REAL
+   CONSTANT PI = 3.14
+   READ radius
+   area := PI * radius * radius
+   print area */
+
+
+import java.util.*;
+public class AreaOfCircle {
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    System.out.print("Enter radius: ");
+    float radius = sc.nextFloat();
+    float pi = 3.14f;
+
+    float area = pi * radius * radius;
+    System.out.println(area);
+  }
+}
+
+                                         ----PALINDROME----
+
+/*
+FUNCTION palindrome (n: INTEGER) : BOOLEAN
+DECLARE a : INTEGER
+DECLARE b : INTEGER
+SET b := 0
+WHILE n > 0 LOOP
+a := n MOD 10
+n := n / 10
+B := b * 10 + a
+END WHILE
+IF n==b THEN
+RETURN True
+ELSE 
+RETURN False
+END IF
+END palindrome
+PRINT palindrome (151)
+PRINT palindrome (12)
+ */
+
+
+public class CheckPalindrome {
+  public static boolean palindrome(int n) {
+     int num = n;
+     int a;
+     int b = 0;
+
+     while ( n > 0) {
+      a = n % 10;
+      n = n / 10;
+      b = b * 10 + a;
+     }
+     return num == b;
+  }
+public static void main(String[] args) {
+  
+     System.out.println(palindrome(151));
+     System.out.println(palindrome(12));
+
+}  
+}
+
+
+                               ----Factorial----
+/*
+FUNCTION factorial ( n: INTEGER) : INTEGER
+DECLARE fact : INTEGER
+SET fact := 1
+FOR i in 1 STEP - 1
+fact := fact * i
+END FOR
+RETURN fact
+EBD FUNCTION
+PRINT factorial(5)
+*/
+
+public class Factorial {
+  public static int factorial(int n) {
+    
+    int fact = 1;
+    for (int i = n; i >= 1; i--) {
+      fact = fact * i;
+    }
+    return fact;
+  }
+  public static void main(String[] args) {
+    System.out.println(factorial(5));
+  }
+}
+
+
+                              ----Absolute Value----
+
+/*
+FUNCTION absvalue(a:INTEGER)
+IF a>0 THEN
+RETURN a
+ELSE
+RETURN -a
+END IF
+END FUNCTION
+PRINT (-5)
+PRINT (7)
+*/
+
+public class AbsoluteValue {
+  public static int absvalue(int a) {
+    if(a>=0) {
+      return a;
+    } else {
+      return -a;
+    }
+  }
+  public static void main(String[] args) {
+    System.out.println(absvalue(-5));
+    System.out.println(absvalue(7));
+
+  }
+}
+
+
+                                  ----GreatestOfTwoNumbers----
+
+/*
+FUNCTION max (a:INTEGER, b:INTEGER) : INTEGER
+DECLARE c: INTEGER
+a>b THEN
+c:=a
+ELSE
+c:=b
+END IF
+RETURN c 
+END FUNCTION
+PRINT max(23, 6)
+*/
+
+public class GreatestOfTwoNumbers {
+  public static int max(int a, int b) {
+    int c;
+    if(a>b) {
+      c = a;
+    } else {
+      c = b;
+    }
+    return c;
+  }
+  public static void main(String[] args) {
+    System.out.println(max(23, 6));
+  }
+}
+
+
+                                      ----Cube----
+
+/*
+FUNCTION cube(a : INTEGER): INTEGER
+RETURN a*a*a
+END FUNCTION
+PRINT cube(3)
+*/
+
+public class CubeFunn {
+  public static int cube(int a) {
+    return a*a*a;
+  }
+  public static void main(String[] args) {
+    System.out.println(cube(3));
+  }
+}
+
+
+                                    ----Area Of Triangle----
+
+/*
+FUNCTION aot(b: REAL, h: REAL): REAL
+RETURN 0.5*b*h
+END FUNCTION
+PRINT aot(3, 4)
+*/
+
+public class FunnAreaOfTriangle {
+  public static float aot(float b, float h) {
+    return 0.5f * b * h;
+  }
+   public static void main(String[] args) {
+    System.out.println(aot(3.4f, 6));
+ } 
+}
+
+
+                                         ----Counting Even odd----
+
+/*
+DECLARE a: Array[3][3] Integer
+DECLARE even: INTEGER
+DECLARE odd: INTEGER
+SET even = 0, odd = 0
+FOR c:= 0 to 2
+READ x[r][c]
+END FOR
+FOR r := 0 TO 2
+FOR c:= 0 TO 2
+IF a[r][c] MOD 2==0 THEN
+INCREMENT even
+ELSE
+INCREMENT even
+END IF
+END FOR
+PRINT even
+PRINE odd
+*/
+
+import java.util.*;
+public class CountEvenOddInMatrix {
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int[][] arr = new int[3][3];
+    int even = 0;
+    int odd = 0;
+
+     for (int r = 0; r < 3; r++) {
+      for (int c = 0; c < 3; c++) {
+        System.out.print("Enter Elements at [" + r + "]" + "[" + c + "]:" );
+        arr[r][c] = sc.nextInt();
+      }
+    }
+    for (int r = 0; r < 3; r++) {
+      for (int c = 0; c < 3; c++) {
+         if(arr[r][c] % 2 == 0) {
+          even++;
+         } else {
+          odd++;
+         }       
+      }
+    }
+    System.out.println("Number of even numbers: " + even);
+    System.out.println("Number of odd Numbers: " + odd);
+  }
+}
+
+
+                                   ----Sum of 2D Array----
+
+/*
+DECLARE arr : Array[2][2] of integer
+DECLARE sum = INTEGER
+FOR  c:= 0 TO 1
+READ x[r][c]
+END FOR
+FOR r:= 0 TO 1
+FOR c:= 0 TO 1
+sum := sum + x[r][c]
+END FOR
+END FOR
+PRINT sum
+*/
+
+import java.util.*;
+public class SumOf2DArray {
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int arr[][] = new int[2][2];
+    int sum = 0;
+    for(int r = 0; r < 2; r++) {
+      for(int c = 0; c < 2; c++) {
+        System.out.print("Enter Elements at [" + r + "]" + "[" + c + "]:" );
+        arr[r][c] = sc.nextInt();
+      }
+    }
+        for(int r = 0; r < 2; r++) {
+          for(int c = 0; c < 2; c++) {
+            sum += arr[r][c];
+          }
+        }
+        System.out.println(sum);
+  }
+}
+
+
+                                      ----Min in Array----
+
+/*
+DECLARE a: ARRAY [10] OF INTEGER
+DECLARE min : INTEGER
+FOR i := 0 TO 1
+READ a[i]
+END FOR
+SET min := a[0]
+FOR i:=0 TO 10
+IF a[i] < min THEN
+min := a[i]
+END IF
+END FOR
+PRINT min
+*/
+
+import java.util.*;
+public class MinInArray {
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int[] arr = new int[10];
+    int min;
+    for (int i = 0; i < arr.length; i++) {
+      arr[i] = sc.nextInt();
+    }
+    min= arr[0];
+    for (int i = 0; i < arr.length; i++) {
+      if(arr[i] < min) {
+        min = arr[i];
+      }
+    }
+    System.out.println("minimum value is: "+min);
+  }
+}
+
+
+                                      ----Circumference of circle----
+
+
+/* DECLARE radius : REAL
+DECLARE circumference : REAL
+CONSTANT PI = 3.14
+READ radius
+area := 2 * PI * radius
+print circumference */
+
+import java.util.*;
+public class CircumferenceOfCircle {
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    System.out.print("Enter radius: ");
+    float radius = sc.nextFloat();
+    float pi = 3.14f;
+     float circumference = 2 * pi * radius;
+     System.out.println(circumference);
+  }
+}
+
+
+                                     ----Area of rectangle----
+
+/* DECLARE length : REAL
+DECLARE breadth : REAL
+DECLARE area : REAL
+READ length
+READ breadth
+area := length * breadth
+print area */
+
+import java.util.*;
+public class AreaOfRectangle {
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    System.out.print("Enter length: ");
+    float length = sc.nextFloat();
+    System.out.print("Enter breadth: ");
+    float breadth = sc.nextFloat();
+    float area = length * breadth;
+    System.out.println(area);
+  }
+}
+
+
+                                       ----Perimeter of rectangle----
+
+/* DECLARE length : REAL
+DECLARE breadth : REAL
+DECLARE perimeter : REAL
+READ length
+READ breadth
+area := 2 * (length * breadth)
+print perimeter */
+
+import java.util.*;
+public class PerimeterOfRectangle {
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    System.out.print("Enter length: ");
+    float length = sc.nextFloat();
+    System.out.print("Enter breadth: ");
+    float breadth = sc.nextFloat();
+    float perimeter = 2 * (length + breadth);
+    System.out.println(perimeter);
+  }
+}
+
+
+                                 ----Swap Two Numbers Temp----
+
+
+/* DECLARE a : INTEGER
+ DECLARE b : INTEGER
+ READ a
+ READ b
+DECLARE temp : INTEGER
+temp = a
+a = b
+b = temp
+PRINT a
+PRINT b
+ */
+
+import java.util.*;
+public class SwapTwoNumbersTemp {
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    System.out.print("Enter a: ");
+    int a = sc.nextInt();
+    System.out.print("Enter b: ");
+    int b = sc.nextInt();
+    int temp = a;
+    a = b; 
+    b = temp;
+
+    System.out.println("Value of a: " + a);
+    System.out.println("Value of b: " + b);
+  }
+}
+
+
+                                        ----Swap Two numbers----
+
+/* DECLARE a : INTEGER
+ DECLARE b : INTEGER
+ READ a
+ READ b
+a := a + b
+b := a - b
+a := a - b
+PRINT a
+PRINT b
+ */
+
+import java.util.*;
+public class SwapTwoNumbers {
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    System.out.print("Enter a: ");
+    int a = sc.nextInt();
+    System.out.print("Enter b: ");
+    int b = sc.nextInt();
+    a = a + b;
+    b = a - b;
+    a = a - b;
+    System.out.println("Value of a: "+ a);
+    System.out.println("Value of b: "+ b);
+  }
+}
+
+
+                                         ----Average----
+
+/* DECLARE a : INTEGER
+   DECLARE b : INTEGER
+   DECLARE average : INTEGER
+   READ a
+   READ b
+  average = (a + b)/2
+  PRINT average
+ */
+
+import java.util.*;
+public class Average {
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int a = sc.nextInt();
+    int b = sc.nextInt();
+    int avg = (a + b)/2;
+    System.out.println(avg);
+  } 
+}
+
+
+
+                                     ----Fibonacci----
+
+/*
+DECLARE n: INTEGER
+DECLARE prev: INTEGER
+DECLARE next: INTEGER
+DECLARE sum: INTEGER
+SET prev:= 0
+SET next:= 1
+SET sum:= 0
+PRINT prev
+PRINT next
+PRINT sum
+WHILE sum <= n
+sum:= prev + next
+PRINT sum
+prev:= next
+next:= sum
+END WHILE
+*/
+
+import java.util.Scanner;
+
+public class Fibonacci {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n;
+        int prev;
+        int next;
+        int sum;
+
+        System.out.print("Enter value of n: ");
+        n = sc.nextInt();
+
+        prev = 0;
+        next = 1;
+        sum = 0;
+
+        System.out.println(prev);
+        System.out.println(next);
+        System.out.println(sum);
+
+        while (sum <= n) {
+            sum = prev + next;
+            System.out.println(sum);
+            prev = next;
+            next = sum;
+        }
+    }
+}
+
+
+
+                                  ----ArmstrongNumber----
+
+
+/*
+DECLARE n: INTEGER
+DECLARE num: INTEGER
+DECLARE b: INTEGER
+DECLARE a: INTEGER
+SET b:= O
+
+WHILE n > 0
+a:= n MOD 10
+n:= n //0
+b:= b + a*a*a
+END WHILE
+
+IF b== num THEN 
+PRINT "Armstrong"
+ELSE
+PRINT "Not Armstrong"
+ENDIF
+*/
+
+import java.util.Scanner;
+
+public class ArmstrongNumber {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n, num, a, b;
+        
+        System.out.print("Enter a number: ");
+        n = sc.nextInt();
+
+        num = n;
+        b = 0;
+
+        while (n > 0) {
+            a = n % 10;
+            n = n / 10;
+            b = b + (a * a * a);
+        }
+
+        if (b == num) {
+            System.out.println("Armstrong");
+        } else {
+            System.out.println("Not Armstrong");
+        }
+    }
+}
